@@ -131,7 +131,7 @@
         </div>
         <div class="text-center">
           <a
-            href="#responsive-header"
+            href="#sellyourmusic"
             class="
               inline-block
               mt-0
@@ -144,7 +144,7 @@
             Sell Your Music
           </a>
           <a
-            href="#responsive-header"
+            href="#artists"
             class="
               inline-block
               hover:text-[#f10305]
@@ -156,7 +156,7 @@
             Artists
           </a>
           <a
-            href="#responsive-header"
+            href="#services"
             class="
               inline-block
               mt-0
@@ -168,7 +168,7 @@
             Services
           </a>
           <a
-            href="#responsive-header"
+            href="#about"
             class="
               inline-block
               mt-0
@@ -179,7 +179,7 @@
           >
             About </a
           ><a
-            href="#responsive-header"
+            href="#contact"
             class="
               inline-block
               mt-0
@@ -213,7 +213,7 @@
         style="color: #e0d2d2"
       >
         <a
-          href="#responsive-header"
+          href="#sellyourmusic"
           class="
             block
             mt-5
@@ -224,25 +224,25 @@
         >
           Sell Your Music </a
         ><a
-          href="#responsive-header"
+          href="#artists"
           class="block mt-5 hover:text-[#f10305] transition-colors"
         >
           Artist
         </a>
         <a
-          href="#responsive-header"
+          href="#services"
           class="block mt-5 hover:text-[#f10305] transition-colors"
         >
           Services
         </a>
         <a
-          href="#responsive-header"
+          href="#about"
           class="block mt-5 hover:text-[#f10305] transition-colors"
         >
           About
         </a>
         <a
-          href="#responsive-header"
+          href="#contact"
           class="block mt-5 hover:text-[#f10305] transition-colors"
         >
           Contact
@@ -278,7 +278,8 @@
       </div>
 
       <!-- footer -->
-      <footer class="text-center mt-3">
+      <footer class="text-center mt-3 pt-3 bg-[#b00b0f]" id="contact">
+        <contact-us-section />
         <img
           src="/assets/logo_footer.png"
           alt="footer logo"
@@ -298,7 +299,7 @@
       class="hidden h-screen w-24 fixed lg:flex top-0 text-[#E0D6D6]"
       style="background-color: #0e0c0c"
     >
-      <ul class="m-auto">
+      <ul class="mx-auto mt-auto py-3">
         <li class="py-1 hover:text-[#f10305] transition-colors">
           <a href="">
             <svg
@@ -354,8 +355,10 @@
 
 <script>
 import { Head, Link } from "@inertiajs/inertia-vue3";
+import ContactUsSection from "@/Components/Sections/ContactUsSection.vue";
 export default {
   components: {
+    ContactUsSection,
     Head,
     Link,
   },
