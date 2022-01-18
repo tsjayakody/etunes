@@ -113,11 +113,12 @@
               mr-4
               transition-colors
             "
+            :class="{ 'text-[#f10305]': route().current('client.signup') }"
           >
             Sign Up
           </a>
           <a
-            href="client-signin"
+            href="/client-signin"
             class="
               inline-block
               mt-0
@@ -125,13 +126,14 @@
               mr-4
               transition-colors
             "
+            :class="{ 'text-[#f10305]': route().current('client.signin') }"
           >
             Login
           </a>
         </div>
         <div class="text-center">
           <a
-            href="#sellyourmusic"
+            href="/"
             class="
               inline-block
               mt-0
@@ -141,54 +143,7 @@
               transition-colors
             "
           >
-            Sell Your Music
-          </a>
-          <a
-            href="#artists"
-            class="
-              inline-block
-              hover:text-[#f10305]
-              mt-0
-              mr-4
-              transition-colors
-            "
-          >
-            Artists
-          </a>
-          <a
-            href="#services"
-            class="
-              inline-block
-              mt-0
-              mr-4
-              hover:text-[#f10305]
-              transition-colors
-            "
-          >
-            Services
-          </a>
-          <a
-            href="#about"
-            class="
-              inline-block
-              mt-0
-              mr-4
-              hover:text-[#f10305]
-              transition-colors
-            "
-          >
-            About </a
-          ><a
-            href="#contact"
-            class="
-              inline-block
-              mt-0
-              mr-4
-              hover:text-[#f10305]
-              transition-colors
-            "
-          >
-            Contact
+            Back To Home
           </a>
         </div>
       </div>
@@ -213,7 +168,7 @@
         style="color: #e0d2d2"
       >
         <a
-          href="#sellyourmusic"
+          href="/"
           class="
             block
             mt-5
@@ -222,33 +177,13 @@
             transition-colors
           "
         >
-          Sell Your Music </a
-        ><a
-          href="#artists"
-          class="block mt-5 hover:text-[#f10305] transition-colors"
+          Back To Home </a
         >
-          Artist
-        </a>
+
+
+
         <a
-          href="#services"
-          class="block mt-5 hover:text-[#f10305] transition-colors"
-        >
-          Services
-        </a>
-        <a
-          href="#about"
-          class="block mt-5 hover:text-[#f10305] transition-colors"
-        >
-          About
-        </a>
-        <a
-          href="#contact"
-          class="block mt-5 hover:text-[#f10305] transition-colors"
-        >
-          Contact
-        </a>
-        <a
-          href="client-signin"
+          href="/client-signin"
           class="
             block
             w-fit
@@ -331,24 +266,9 @@
     <!-- content -->
 
     <div class="lg:pl-24">
-      <div class="p-6">
+      <div style="height: calc(100vh - 6rem)">
         <slot />
       </div>
-
-      <!-- footer -->
-      <footer class="text-center mt-3 pt-3 bg-[#b00b0f]" id="contact">
-        <contact-us-section />
-        <img
-          src="/assets/logo_footer.png"
-          alt="footer logo"
-          class="w-12 mx-auto"
-        />
-        <p class="text-white py-3 opacity-60">
-          © Copyright {{ new Date().getFullYear() }} eTunes. All Rights
-          Reserved.
-        </p>
-      </footer>
-      <!-- end footer -->
     </div>
 
     <!-- end content -->

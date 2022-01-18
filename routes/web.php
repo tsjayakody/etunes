@@ -22,5 +22,11 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/client-signin', function () {
+    return Inertia::render('ClientSignin');
+})->middleware(['auth', 'verified'])->name('client.signin');
+Route::get('/client-signup', function () {
+    return Inertia::render('ClientSignup');
+})->middleware(['auth', 'verified'])->name('client.signup');
 
 require __DIR__.'/auth.php';

@@ -10,7 +10,7 @@
         the widest audience possible.
       </p>
       <a
-        href="#responsive-header"
+        href="/client-signin"
         class="
           block
           w-fit

@@ -64,7 +64,11 @@
         </div>
       </swiper-slide>
     </swiper>
-    <video-modal :open="open" :videoUrl="selectedVideoUrl" @close="closeModal"/>
+    <video-modal
+      :open="open"
+      :videoUrl="selectedVideoUrl"
+      @close="closeModal"
+    />
   </div>
 </template>
 <script>
@@ -88,10 +92,10 @@ export default {
   data() {
     return {
       youtubeLinks: [
-        "https://www.youtube.com/watch?v=TxmkYKB5f_E",
-        "https://www.youtube.com/watch?v=-rOxfOJMCD8",
-        "https://www.youtube.com/watch?v=ePGBiYFtjnw",
-        "https://www.youtube.com/watch?v=J8Sk8DXXTiE",
+        "https://youtu.be/pT74gysxlAI",
+        "https://youtu.be/TxmkYKB5f_E",
+        "https://youtu.be/zzIetjw7YP4",
+        "https://youtu.be/6Lu7uBIy4gU",
       ],
       open: false,
       selectedVideoUrl: null,

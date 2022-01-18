@@ -40,7 +40,7 @@
           <li class="lg:leading-[2.5] leading-[2]">Royalty Payments direct to your bank account</li>
         </ul>
         <a
-        href="#responsive-header"
+        href="/client-signup"
         class="
           block
           w-fit
