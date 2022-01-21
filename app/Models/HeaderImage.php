@@ -4,8 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class HeaderImage extends Model
+class HeaderImage extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory, InteractsWithMedia;
+
+    public function registerMediaCollections(): void
+    {
+        $this
+        ->addMediaCollection('page-images')
+        ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/jpg'])
+        ->singleFile();
+    }
 }
