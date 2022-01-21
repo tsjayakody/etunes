@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSecondaryImagesTable extends Migration
+class CreatePageImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateSecondaryImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('secondary_images', function (Blueprint $table) {
+        Schema::create('page_images', function (Blueprint $table) {
             $table->id();
-			$table->string('name');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateSecondaryImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('secondary_images');
+        Schema::dropIfExists('page_images');
     }
 }

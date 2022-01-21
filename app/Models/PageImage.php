@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class SecondaryImage extends Model implements HasMedia
+class PageImage extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
@@ -16,6 +16,8 @@ class SecondaryImage extends Model implements HasMedia
         $this
             ->addMediaCollection('page-images')
             ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/jpg'])
+            ->useFallbackUrl('/assets/page-image-fallback.png')
+            ->useFallbackPath(public_path('/assets/page-image-fallback.png'))
             ->singleFile();
     }
 }

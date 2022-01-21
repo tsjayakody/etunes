@@ -17,6 +17,8 @@ class Artist extends Model implements HasMedia
         $this
             ->addMediaCollection('artist-images')
             ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/jpg'])
+            ->useFallbackPath(public_path('/assets/artist-fallback-image.png'))
+            ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/jpg'])
             ->singleFile();
     }
 }

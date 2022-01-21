@@ -15,6 +15,8 @@ class FeaturedVideo extends Model implements HasMedia
     {
         $this
             ->addMediaCollection('video-images')
+            ->useFallbackUrl('/assets/page-image-fallback.png')
+            ->useFallbackPath(public_path('/assets/featured-video-fallback-image.png'))
             ->acceptsMimeTypes(['image/jpeg', 'image/png', 'image/jpg'])
             ->singleFile();
     }
