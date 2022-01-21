@@ -15,6 +15,7 @@ class CreateFeaturedVideosTable extends Migration
     {
         Schema::create('featured_videos', function (Blueprint $table) {
             $table->id();
+            $table->text('youtube_url');
             $table->timestamps();
         });
     }
