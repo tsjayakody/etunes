@@ -15,7 +15,7 @@
       "
     >
       <div class="flex items-center flex-shrink-0 text-white">
-        <img src="/assets/logo.png" alt="e tunes logo" srcset="" class="h-12" />
+        <a href="/"><img src="/assets/logo.png" alt="e tunes logo" srcset="" class="h-12" /></a>
       </div>
       <div class="block lg:hidden">
         <button
@@ -266,9 +266,7 @@
     <!-- content -->
 
     <div class="lg:pl-24">
-      <div style="height: calc(100vh - 6rem)">
         <slot />
-      </div>
     </div>
 
     <!-- end content -->

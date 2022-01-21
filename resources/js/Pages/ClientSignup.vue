@@ -1,6 +1,6 @@
 <template>
     <client-auth>
-        <iframe src="https://www.distro.direct/etunes/registration_iframe.php" title="Signup" style="width:100%; height:541px; border:none;"></iframe>
+        <iframe src="https://www.distro.direct/etunes/registration_iframe.php" title="Signup" style="width:100%; height: calc(100vh - 6rem); border:none;"></iframe>
     </client-auth>
 </template>
 <script>
@@ -9,6 +9,8 @@ export default {
     components: {
         ClientAuth
     },
-    data() {},
+    data() {
+        return {}
+    },
 }
 </script>

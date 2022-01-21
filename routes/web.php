@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -18,15 +19,33 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/client-signin', function () {
     return Inertia::render('ClientSignin');
-})->middleware(['auth', 'verified'])->name('client.signin');
+})->name('client.signin');
 Route::get('/client-signup', function () {
     return Inertia::render('ClientSignup');
-})->middleware(['auth', 'verified'])->name('client.signup');
+})->name('client.signup');
+Route::post('/getstartedpost', [ClientController::class, 'emailClientData'])->name('client.getstartedpost');
+Route::get('/getstarted', function () {
+    return Inertia::render('GetStarted');
+})->name('client.getstarted');
 
-require __DIR__.'/auth.php';
+Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
+    // Route for display dashboard
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+
+    // Route for main images page
+    Route::get('/images', function () {
+        return Inertia::render('Images');
+    })->name('images');
+
+    // Route for main images page
+    Route::get('/artists', function () {
+        return Inertia::render('Artists');
+    })->name('artists');
+});
+
+
+require __DIR__ . '/auth.php';

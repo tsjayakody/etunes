@@ -18,6 +18,12 @@
                                 <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </BreezeNavLink>
+                                <BreezeNavLink :href="route('images')" :active="route().current('images')">
+                                    Images
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('artists')" :active="route().current('artists')">
+                                    Artists
+                                </BreezeNavLink>
                             </div>
                         </div>
 
@@ -64,6 +70,12 @@
                         <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
                         </BreezeResponsiveNavLink>
+                        <BreezeResponsiveNavLink :href="route('images')" :active="route().current('images')">
+                            Images
+                        </BreezeResponsiveNavLink>
+                        <BreezeResponsiveNavLink :href="route('artists')" :active="route().current('artists')">
+                            Artists
+                        </BreezeResponsiveNavLink>
                     </div>
 
                     <!-- Responsive Settings Options -->
@@ -81,13 +93,6 @@
                     </div>
                 </div>
             </nav>
-
-            <!-- Page Heading -->
-            <header class="bg-white shadow" v-if="$slots.header">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <slot name="header" />
-                </div>
-            </header>
 
             <!-- Page Content -->
             <main>

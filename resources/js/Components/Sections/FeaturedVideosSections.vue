@@ -20,6 +20,8 @@
       :grabCursor="true"
       :centeredSlides="true"
       :slidesPerView="'auto'"
+      :loop="true"
+      :autoplay="{ delay: 5000, pauseOnMouseEnter: true }"
       :coverflowEffect="{
         rotate: 50,
         stretch: 0,
@@ -73,10 +75,10 @@
 </template>
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
+import SwiperCore, { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import PlayButton from "@/Components/PlayButton.vue";
 import VideoModal from "@/Components/VideoModal.vue";
-SwiperCore.use([EffectCoverflow, Pagination]);
+SwiperCore.use([EffectCoverflow, Pagination, Autoplay]);
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";

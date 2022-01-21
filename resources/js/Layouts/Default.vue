@@ -15,7 +15,7 @@
       "
     >
       <div class="flex items-center flex-shrink-0 text-white">
-        <img src="/assets/logo.png" alt="e tunes logo" srcset="" class="h-12" />
+        <a href="/"><img src="/assets/logo.png" alt="e tunes logo" srcset="" class="h-12" /></a>
       </div>
       <div class="block lg:hidden">
         <button
@@ -105,7 +105,7 @@
       >
         <div class="text-center ml-12">
           <a
-            href="client-signup"
+            href="/getstarted"
             class="
               inline-block
               mt-0
@@ -117,7 +117,7 @@
             Sign Up
           </a>
           <a
-            href="client-signin"
+            href="/client-signin"
             class="
               inline-block
               mt-0
