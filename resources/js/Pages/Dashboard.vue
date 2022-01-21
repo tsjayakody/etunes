@@ -33,7 +33,6 @@
                     h-52
                     grid
                     place-items-center
-                    h-screen
                     sm:rounded
                   "
                 >
@@ -64,7 +63,6 @@
                     h-52
                     grid
                     place-items-center
-                    h-screen
                     sm:rounded
                   "
                 >
@@ -86,7 +84,7 @@
                   m-5
                 "
               >
-                <div class="bg-green-300 border-b border-gray-200 h-96">
+                <div class="border-b border-gray-200 h-96">
                   <img src="/assets/header-section-image.jpg" alt="" />
                 </div>
               </div>
@@ -101,7 +99,7 @@
                   m-5
                 "
               >
-                <div class="bg-green-300 border-b border-gray-200 h-96">
+                <div class="border-b border-gray-200 h-96">
                   <img src="/assets/why_work_with_us.jpg" alt="" />
                 </div>
               </div>
