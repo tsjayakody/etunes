@@ -7,7 +7,7 @@
         <img
             class="max-w-[430px] ml-auto w-full"
             style="box-shadow: 7px 7px #e0131c"
-            src="/assets/why_work_with_us.jpg"
+            :src="$page.props.simage"
             alt="Header Section Image"
           />
       </div>

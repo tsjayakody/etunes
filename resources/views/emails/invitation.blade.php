@@ -573,6 +573,33 @@
                                                                                     "
                                                                                 >
                                                                                     <tbody>
+                                                                                                                                                    <tr
+                                                                                            style="
+                                                                                                border-style: none
+                                                                                                    none
+                                                                                                    solid
+                                                                                                    none;
+                                                                                                border-width: 1px;
+                                                                                            "
+                                                                                        >
+                                                                                            <th
+                                                                                                style="
+                                                                                                    width: 200px;
+                                                                                                "
+                                                                                            >
+                                                                                                Select
+                                                                                                 
+                                                                                            </th>
+                                                                                            <td
+                                                                                                style="
+                                                                                                    mso-line-height-rule: exactly;
+                                                                                                    -ms-text-size-adjust: 100%;
+                                                                                                    -webkit-text-size-adjust: 100%;
+                                                                                                "
+                                                                                            >
+                                                                                                : {{ $data['select'] }}
+                                                                                            </td>
+                                                                                        </tr>
                                                                                         <tr
                                                                                             style="
                                                                                                 border-style: none

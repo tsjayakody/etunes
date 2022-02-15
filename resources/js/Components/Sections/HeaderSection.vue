@@ -43,7 +43,7 @@
       <div style="box-shadow: 7px 7px #e0131c">
         <img
         style="min-width: 295px"
-          src="/assets/header-section-image.jpg"
+          :src="$page.props.himage"
           alt="Header Section Image"
         />
       </div>
@@ -54,7 +54,6 @@
 <script>
 import PartnersIcons from "@/Components/PartnersIcons.vue";
 export default {
-  props: {},
   components: {
       PartnersIcons,
   }

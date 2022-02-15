@@ -11,6 +11,8 @@ class FeaturedVideo extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
+    protected $fillable = ['youtube_url'];
+
     public function registerMediaCollections(): void
     {
         $this

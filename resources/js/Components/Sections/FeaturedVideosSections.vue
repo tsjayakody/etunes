@@ -42,11 +42,12 @@
         },
       }"
     >
-      <swiper-slide v-for="(link, key) in youtubeLinks" :key="key">
+    <template v-if="$page.props.featuredVideos.length > 0">
+        <swiper-slide v-for="(video, key) in $page.props.featuredVideos" :key="key">
         <div class="relative">
           <img
             class="aspect-video rounded-2xl brightness-75"
-            :src="getYoutubeThumbnail(link, '')"
+            :src="video.media[0].original_url"
           />
           <play-button
             class="
@@ -61,10 +62,21 @@
               -translate-x-1/2 -translate-y-1/2
               w-24
             "
-            v-on:click.prevent="openModal(link)"
+            v-on:click.prevent="openModal(video.youtube_url)"
           />
         </div>
       </swiper-slide>
+    </template>
+    <template v-else>
+        <swiper-slide>
+        <div class="relative">
+          <img
+            class="aspect-video rounded-2xl brightness-75"
+            src="/assets/featured-video-fallback-image.png"
+          />
+        </div>
+      </swiper-slide>
+    </template>
     </swiper>
     <video-modal
       :open="open"
@@ -93,47 +105,12 @@ export default {
   },
   data() {
     return {
-      youtubeLinks: [
-        "https://youtu.be/pT74gysxlAI",
-        "https://youtu.be/TxmkYKB5f_E",
-        "https://youtu.be/zzIetjw7YP4",
-        "https://youtu.be/6Lu7uBIy4gU",
-      ],
       open: false,
       selectedVideoUrl: null,
     };
   },
 
   methods: {
-    getYoutubeThumbnail(url, quality) {
-      if (url) {
-        let videoId, thumbnail, result;
-        if ((result = url.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/))) {
-          videoId = result.pop();
-        } else if ((result = url.match(/youtu.be\/(.{11})/))) {
-          videoId = result.pop();
-        }
-
-        if (videoId) {
-          if (typeof quality == "undefined") {
-            quality = "high";
-          }
-
-          let quality_key = "maxresdefault"; // Max quality
-          if (quality == "low") {
-            quality_key = "sddefault";
-          } else if (quality == "medium") {
-            quality_key = "mqdefault";
-          } else if (quality == "high") {
-            quality_key = "hqdefault";
-          }
-
-          thumbnail =
-            "http://img.youtube.com/vi/" + videoId + "/" + quality_key + ".jpg";
-          return thumbnail;
-        }
-      }
-    },
     closeModal() {
       this.open = false;
     },

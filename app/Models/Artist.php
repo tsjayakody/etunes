@@ -12,6 +12,8 @@ class Artist extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
+    protected $fillable = ['name', 'description', 'facebook', 'twitter', 'instagram', 'deezer', 'spotify', 'applemusic', 'amazonmusic', 'tiktok'];
+
     public function registerMediaCollections(): void
     {
         $this

@@ -105,7 +105,7 @@
       >
         <div class="text-center ml-12">
           <a
-            href="client-signup"
+            href="/getstarted"
             class="
               inline-block
               mt-0
