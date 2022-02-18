@@ -69,7 +69,7 @@
 
 				<!-- how find-->
 				<div class="mb-4">
-                    <custom-select-input :placeholderText="'How did you find us?'" :options="selectOptionshd" placeholder="Select (Required)" id="howDid" class="mt-1 block w-full" v-model="form.howDid" autocomplete="howDid" />
+					<custom-select-input :placeholderText="'How did you find us?'" :options="selectOptionshd" placeholder="Select (Required)" id="howDid" class="mt-1 block w-full" v-model="form.howDid" autocomplete="howDid" />
 					<div v-if="form.errors.howDid" class="text-sm text-red-600 pt-1">{{ form.errors.howDid }}</div>
 				</div>
 				<button type="submit" class="block w-fit mt-5 hover:text-black text-white text-center text-lg py-1 px-8 md:py-2 md:px-10 md:text-xl lg:py-3 lg:px-12 lg:text-2xl font-extrabold rounded-full bg-gradient-to-t transition-colors from-[#950808] to-[#FF0000] mx-auto">Submit</button>
@@ -83,13 +83,14 @@ import CustomInput from "@/Components/CustomInput.vue";
 import CustomSelectInput from "@/Components/CustomSelectInput.vue";
 import CustomInputError from "@/Components/CustomInputError.vue";
 import CustomTextArea from "@/Components/CustomTextArea.vue";
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 export default {
 	components: {
 		ClientAuth,
 		CustomInput,
 		CustomInputError,
 		CustomTextArea,
-        CustomSelectInput
+		CustomSelectInput,
 	},
 	data() {
 		return {
@@ -108,34 +109,17 @@ export default {
 				howFrequently: "",
 				howDid: "",
 			}),
-            selectOptions: [
-                'Independant Artist',
-                'Record Label',
-                'Management Company',
-                'Distributor/ Aggregator',
-                'Artist Services Platform',
-            ],
-            selectOptionshd: [
-                'Search Engine',
-                'Google Ads',
-                'Facebook Ads',
-                'Youtube Ads',
-                'Other paid social media advertising',
-                'Facebook post/group',
-                'Twitter post',
-                'Instagram post/story',
-                'Other social media',
-                'Email',
-                'Radio',
-                'TV',
-                'Newspaper',
-                'Word of mouth',
-            ],
+			selectOptions: ["", "Independant Artist", "Record Label", "Management Company", "Distributor/ Aggregator", "Artist Services Platform"],
+			selectOptionshd: ["", "Search Engine", "Google Ads", "Facebook Ads", "Youtube Ads", "Other paid social media advertising", "Facebook post/group", "Twitter post", "Instagram post/story", "Other social media", "Email", "Radio", "TV", "Newspaper", "Word of mouth"],
 		};
 	},
 	methods: {
 		submit() {
-			this.form.post(this.route("client.getstartedpost"));
+			this.form.post(this.route("client.getstartedpost"), {
+				onSuccess: () => {
+					Notify.success("Your details submitted successfully. You will contact by our representative soon.", { timeout: 5000});
+				},
+			});
 		},
 	},
 };

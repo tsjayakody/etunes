@@ -6,9 +6,9 @@
         mt-6
         lg:mt-0
         text-center text-2xl
-        sm:text-3xl
-        md:text-4xl
-        lg:text-5xl
+        sm:text-xl
+        md:text-2xl
+        lg:text-3xl
         uppercase
       "
     >

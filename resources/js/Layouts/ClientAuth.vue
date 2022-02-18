@@ -1,6 +1,6 @@
 <template>
   <Head title="Home" />
-  <div style="background-color: #020202">
+  <div class="bg-[#020202]">
     <!-- nav bar -->
     <nav
       class="
@@ -268,6 +268,22 @@
     <div class="lg:pl-24">
         <slot />
     </div>
+
+    <!-- footer -->
+      <footer class="text-center mt-3 pt-3 bg-[#b00b0f]" id="contact">
+        <contact-us-section />
+        <img
+          src="/assets/logo_footer.png"
+          alt="footer logo"
+          class="w-12 mx-auto"
+        />
+        <p class="text-white py-3 opacity-60">
+          © Copyright {{ new Date().getFullYear() }} eTunes. All Rights
+          Reserved.<br>
+          Developed by Derana MacroEntertainment Dev Team
+        </p>
+      </footer>
+      <!-- end footer -->
 
     <!-- end content -->
     <!-- social icons desktop -->

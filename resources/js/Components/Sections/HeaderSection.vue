@@ -3,7 +3,7 @@
     <div class="basis-full md:basis-2/3 lg:basis-3/5">
       <p class="text-sm md:text-xl text-center md:text-left tracking-[.8em] md:tracking-normal lg:text-3xl font-black text-[#E8D0E3]">RELEASE YOUR MUSIC</p>
       <p class="text-5xl md:text-7xl text-center md:text-left tracking-[.08em] md:tracking-normal lg:text-9xl font-black text-[#EFDFEC]">WORLDWIDE</p>
-      <p class="text-xs md:text-xl text-justify md:text-left lg:text-2xl font-semibold text-[#D6CDCD] max-w-4xl">
+      <p class="text-xs md:text-lg text-justify md:text-left lg:text-xl font-semibold text-[#D6CDCD] max-w-4xl">
         We handle everything. eTunes makes your music available for the world to
         experience and collects streaming royalties on your behalf. Focus on
         your music while we do the heavy lifting to make your music available to

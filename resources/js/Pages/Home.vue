@@ -1,6 +1,6 @@
 <template>
   <default-layout>
-    <header-section id="sellyourmusic" />
+    <header-section id="sellyourmusic"/>
     <featured-videos-section id="" class="mt-3" />
     <what-we-do-section id="services" class="md:pt-12" />
     <artists-section id="artists" class="md:pt-12" v-if="$page.props.artists.length > 0"/>

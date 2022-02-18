@@ -16,7 +16,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [ClientController::class, 'showMainPage']);
+Route::get('/', [ClientController::class, 'showMainPage'])->name('client.mainpage');
 Route::get('/client-signin', function () {
     return Inertia::render('ClientSignin');
 })->name('client.signin');

@@ -51,6 +51,6 @@ class ClientController extends Controller
 
         Mail::to($user)->queue(new InvitationDataSubmitted($data));
 
-        return redirect(route('client.getstarted'));
+        return redirect(route('client.mainpage'));
     }
 }

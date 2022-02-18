@@ -331,7 +331,7 @@
     <!-- content -->
 
     <div class="lg:pl-24">
-      <div class="p-6">
+      <div class="p-6 xl:mx-14">
         <slot />
       </div>
 
@@ -345,7 +345,8 @@
         />
         <p class="text-white py-3 opacity-60">
           © Copyright {{ new Date().getFullYear() }} eTunes. All Rights
-          Reserved.
+          Reserved.<br>
+          Developed by Derana MacroEntertainment Dev Team
         </p>
       </footer>
       <!-- end footer -->

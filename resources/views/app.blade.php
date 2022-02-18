@@ -10,6 +10,8 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
+        <!-- site icon -->
+        <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
@@ -17,7 +19,7 @@
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-[#020202]">
         @inertia
 
         <script type="text/javascript" src="/js/freechat.js"></script>
