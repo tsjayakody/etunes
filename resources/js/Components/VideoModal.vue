@@ -92,10 +92,10 @@ export default {
   },
   computed: {
     playerWidth() {
-      return window.innerWidth * 0.9;
+      return window.innerWidth * 0.7;
     },
     playerHeight() {
-      return ((window.innerWidth * 0.9) / 16) * 9;
+      return ((window.innerWidth * 0.7) / 16) * 9;
     },
   },
   props: ["open", "videoUrl"],

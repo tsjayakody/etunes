@@ -331,7 +331,7 @@
     <!-- content -->
 
     <div class="lg:pl-24">
-      <div class="p-6 xl:mx-14">
+      <div class="p-6 xl:mx-36">
         <slot />
       </div>
 

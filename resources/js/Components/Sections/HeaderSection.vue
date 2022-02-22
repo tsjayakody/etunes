@@ -2,13 +2,14 @@
   <div class="flex flex-col md:flex-row  lg:my-24">
     <div class="basis-full md:basis-2/3 lg:basis-3/5">
       <p class="text-sm md:text-xl text-center md:text-left tracking-[.8em] md:tracking-normal lg:text-3xl font-black text-[#E8D0E3]">RELEASE YOUR MUSIC</p>
-      <p class="text-5xl md:text-7xl text-center md:text-left tracking-[.08em] md:tracking-normal lg:text-9xl font-black text-[#EFDFEC]">WORLDWIDE</p>
+      <p class="text-4xl sm:text-5xl md:text-7xl text-center md:text-left tracking-[.08em] md:tracking-normal lg:text-8xl font-black text-[#EFDFEC]">WORLDWIDE</p>
       <p class="text-xs md:text-lg text-justify md:text-left lg:text-xl font-semibold text-[#D6CDCD] max-w-4xl">
         We handle everything. eTunes makes your music available for the world to
         experience and collects streaming royalties on your behalf. Focus on
         your music while we do the heavy lifting to make your music available to
         the widest audience possible.
       </p>
+      <partners-icons class="py-4 px-0 md:pr-3 opacity-40 max-w-3xl" />
       <a
         href="/client-signin"
         class="
@@ -37,12 +38,11 @@
       >
         Login
       </a>
-      <partners-icons class="py-4 px-0 md:pr-3 opacity-40 max-w-5xl" />
     </div>
     <div class="basis-full mx-auto md:basis-1/3 lg:basis-1/4">
-      <div style="box-shadow: 7px 7px #e0131c">
+      <div style="box-shadow: 7px 7px #e0131c; max-width: fit-content">
         <img
-        style="min-width: 295px"
+        style="min-width: 295px; max-height: 450px"
           :src="$page.props.himage"
           alt="Header Section Image"
         />
